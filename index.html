@@ -114,7 +114,14 @@
     .hero .wrap { padding-top: 56px; padding-bottom: 64px; }
     section.block .wrap, .cta .wrap, .dark .wrap { padding-top: 64px; padding-bottom: 64px; }
     .actions .btn { flex: 1 1 100%; }
-    header img { height: 30px; }
+    header img { height: 26px; }
+    header .wrap { flex-wrap: nowrap; }
+    header .btn-sm { padding: 10px 16px; font-size: 15px; white-space: nowrap; }
+    .steps { gap: 14px; }
+    .step { display: grid; grid-template-columns: 40px 1fr; column-gap: 14px; row-gap: 4px; padding: 20px; }
+    .step .num { width: 40px; height: 40px; font-size: 18px; grid-row: 1 / span 2; }
+    .step h3 { font-size: 19px; align-self: center; }
+    .step p { grid-column: 2; }
   }
 </style>
 </head>
