@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PA Preceptor | Precept PA students. We handle the rest.</title>
+<meta name="description" content="Precept 3 PA students in 2027 and earn a $1,500 honorarium. You pick the dates. We handle the affiliation agreement, scheduling, and onboarding.">
+<meta property="og:title" content="PA Preceptor">
+<meta property="og:description" content="Precept 3 PA students in 2027 and earn a $1,500 honorarium. You pick the dates. We handle the rest.">
+<meta property="og:url" content="https://papreceptor.com/">
+<meta property="og:image" content="https://papreceptor.com/logo-stacked.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #12302D;
+    --teal: #0B6B63;
+    --teal-dark: #084F49;
+    --mint: #EAF4F1;
+    --muted: #475A57;
+    --line: #D3E3DE;
+    --on-dark: #C9DDD8;
+    --check-on-dark: #7FD1C3;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: #fff;
+  }
+  h1, h2, h3 { font-family: Lexend, system-ui, sans-serif; color: var(--ink); margin: 0; }
+  p { margin: 0; }
+  a { color: var(--teal); }
+  a:hover { color: var(--teal-dark); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 760px; }
+
+  .btn {
+    display: inline-block; padding: 15px 28px; border-radius: 999px;
+    font-weight: 600; font-size: 18px; text-decoration: none; text-align: center;
+    background: var(--teal); color: #fff; border: 2px solid var(--teal);
+    transition: background .15s, border-color .15s;
+  }
+  .btn:hover { background: var(--teal-dark); border-color: var(--teal-dark); color: #fff; }
+  .btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-outline:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .btn-sm { padding: 10px 20px; font-size: 16px; }
+  .btn:focus-visible { outline: 3px solid #F2A541; outline-offset: 3px; }
+
+  header { border-bottom: 1px solid var(--line); background: #fff; }
+  header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
+  header img { height: 36px; width: auto; display: block; }
+
+  .hero { background: var(--mint); }
+  .hero .wrap { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding-top: 84px; padding-bottom: 92px; }
+  .hero-text { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+  .eyebrow { font-weight: 600; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); }
+  .hero h1 { font-weight: 700; font-size: clamp(2.3rem, 5vw, 3.4rem); line-height: 1.08; letter-spacing: -.02em; }
+  .lead { font-size: 21px; color: #2E4A46; max-width: 560px; }
+  .lead strong { color: var(--ink); }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; padding-top: 6px; }
+  .offer {
+    flex: 1 1 300px; min-width: 0; background: #fff; border-radius: 20px; padding: 32px;
+    box-shadow: 0 10px 30px rgba(18,48,45,.08); display: flex; flex-direction: column; gap: 22px;
+  }
+  .amount { font-family: Lexend, sans-serif; font-weight: 700; font-size: 44px; line-height: 1.1; color: var(--teal); }
+  .amount-note { font-size: 16px; color: var(--muted); }
+  .rule { height: 1px; background: var(--line); }
+  .checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; font-size: 17px; }
+  .checks li { display: flex; gap: 12px; align-items: flex-start; }
+  .checks svg { flex: none; margin-top: 3px; }
+
+  section.block .wrap { padding-top: 92px; padding-bottom: 92px; display: flex; flex-direction: column; gap: 40px; }
+  h2 { font-weight: 700; font-size: clamp(1.8rem, 3.5vw, 2.3rem); letter-spacing: -.01em; }
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+  .step { display: flex; flex-direction: column; gap: 10px; padding: 28px; border: 1px solid var(--line); border-radius: 16px; }
+  .num { width: 44px; height: 44px; border-radius: 999px; background: var(--mint); color: var(--teal); font-family: Lexend, sans-serif; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center; }
+  .step h3 { font-weight: 600; font-size: 21px; }
+  .step p { font-size: 17px; color: var(--muted); }
+
+  .dark { background: var(--ink); color: #fff; }
+  .dark .wrap { display: flex; flex-wrap: wrap; gap: 48px; padding-top: 88px; padding-bottom: 88px; }
+  .dark h2 { color: #fff; }
+  .dark-intro { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .dark-intro p { color: var(--on-dark); }
+  .dark .checks { flex: 1 1 380px; min-width: 0; font-size: 19px; gap: 18px; }
+
+  .faq { display: flex; flex-direction: column; }
+  .faq div { padding: 22px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+  .faq div:first-child { padding-top: 0; }
+  .faq div:last-child { border-bottom: 0; padding-bottom: 0; }
+  .faq h3 { font-weight: 600; font-size: 20px; }
+  .faq p { color: var(--muted); }
+
+  .cta { background: var(--mint); }
+  .cta .wrap { padding-top: 92px; padding-bottom: 92px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+  .cta p { color: #2E4A46; max-width: 560px; }
+  .cta .small { font-size: 16px; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); }
+  footer .wrap { padding-top: 36px; padding-bottom: 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 16px; color: var(--muted); }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .hero .wrap { padding-top: 56px; padding-bottom: 64px; }
+    section.block .wrap, .cta .wrap, .dark .wrap { padding-top: 64px; padding-bottom: 64px; }
+    .actions .btn { flex: 1 1 100%; }
+    header img { height: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#top" aria-label="PA Preceptor home"><img src="logo-wordmark.png" alt="PA Preceptor"></a>
+    <a class="btn btn-sm" href="https://forms.cloud.microsoft/r/XS4ixieNfq" target="_blank" rel="noopener">I'm interested</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <div class="eyebrow">For pediatric clinicians in independent practices</div>
+        <h1>Precept PA students. We handle the rest.</h1>
+        <p class="lead">Precept 3 PA students in 2027 and earn a <strong>$1,500 honorarium</strong>. You pick the dates.</p>
+        <div class="actions">
+          <a class="btn" href="https://forms.cloud.microsoft/r/XS4ixieNfq" target="_blank" rel="noopener">I'm interested</a>
+          <a class="btn btn-outline" href="#how">How it works</a>
+        </div>
+      </div>
+      <aside class="offer" aria-label="What you get">
+        <div>
+          <div class="amount">$1,500</div>
+          <div class="amount-note">honorarium for 3 students in 2027</div>
+        </div>
+        <div class="rule"></div>
+        <ul class="checks">
+          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6B63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You choose the months</li>
+          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6B63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>We prepare the paperwork</li>
+          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6B63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Support for you and your students</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li class="step"><div class="num">1</div><h3>Tell us when</h3><p>Choose the months in 2027 that work for your practice.</p></li>
+        <li class="step"><div class="num">2</div><h3>We match you</h3><p>We pair you with an accredited PA program that needs pediatric rotations.</p></li>
+        <li class="step"><div class="num">3</div><h3>We handle the details</h3><p>Affiliation agreement, scheduling, and student onboarding. We coordinate it all.</p></li>
+        <li class="step"><div class="num">4</div><h3>You teach</h3><p>Precept three students over the year and receive your $1,500 honorarium.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="dark-intro">
+        <h2>Who we're looking for</h2>
+        <p>Physicians, NPs, and PAs are all welcome as preceptors. New to precepting? That's fine. We'll support you through your first rotation.</p>
+      </div>
+      <ul class="checks">
+        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FD1C3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Practicing full time in pediatrics (newborn through teen patients)</li>
+        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FD1C3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Work at an independent or privately owned practice (not hospital- or health system–owned)</li>
+        <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FD1C3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Interested in mentoring future PAs</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap narrow">
+      <h2>Common questions</h2>
+      <div class="faq">
+        <div><h3>How long is each rotation?</h3><p>Rotations are typically 4–6 weeks. You'll know the dates before you commit.</p></div>
+        <div><h3>Who covers the student's liability insurance?</h3><p>Students are covered through their PA program.</p></div>
+        <div><h3>What paperwork is involved?</h3><p>A standard affiliation agreement between your practice and the PA program. We prepare it and walk you through it.</p></div>
+        <div><h3>Does my practice need to approve this?</h3><p>Yes. Whoever signs agreements for your practice will need to sign off. We're happy to talk with them directly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="interest">
+    <div class="wrap">
+      <h2>Interested? Let's connect.</h2>
+      <p>No commitment. Tell us a little about your practice and we'll be in touch.</p>
+      <a class="btn" href="https://forms.cloud.microsoft/r/XS4ixieNfq" target="_blank" rel="noopener">Fill out the interest form</a>
+      <p class="small">Questions? Email <a href="mailto:connect@papreceptor.com">connect@papreceptor.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Founded by a PA educator who knows how hard pediatric rotations are to find.</div>
+    <div>© 2026 PA Preceptor</div>
+  </div>
+</footer>
+
+</body>
+</html>
